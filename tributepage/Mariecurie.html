@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>Marie Curie</title>
+<style>
+
+
+     html, body{
+        display: flex;
+            flex-direction: column;
+            height: 100%;
+     }  
+     
+     body {
+            margin: 0;
+            background: #f7dece;
+            color: #3a3a3a;
+            font-family:'PT Serif', serif;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color:#000000;
+            background: #ccccbb;
+        }
+
+    #main-content{
+        flex: 6;
+        padding: 10px 20% 10px 10px;
+    }
+    .main-content__img--full-width{
+        width: 100%;
+    }
+
+    #main-content-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #links-sidebar {
+            flex: 2;
+            background: #9ec4bb;
+        }
+
+        #main-content {
+            flex: 6;
+            padding: 10px 20% 10px 10px;
+        }
+
+        #footer {
+            padding: 0 20px 20px 20px;
+            margin-top: auto;
+            display: flex;
+            background: #f3f3f3;
+        }
+
+        .footer__section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+#links-sidebar {
+    flex:2;
+    padding: 10px;
+}
+
+#links-sidebar ul{
+    padding: 0 0 0 10px;
+}
+
+#links-sidebar li{
+    list-style: none;
+}
+
+ #navigation-bar ul {
+            margin: 0;
+            padding: 0;
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+        }
+
+        #navigation-bar li {
+            display: inline-block;
+        }
+
+        #navigation-bar li a {
+            display: block;
+            color: #665;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #navigation-bar li a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        #navigation-bar li a.active {
+            color: #fff;
+            background-color: #665;
+        }
+
+        #navigation-bar .menu__hamburger-icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            #navigation-bar li:not(:first-child) {
+                display: none;
+            }
+            #navigation-bar li.menu__hamburger-icon {
+                display: block;
+                float: right;
+            }
+            #navigation-bar.responsive {
+                position: relative;
+            }
+            #navigation-bar.responsive .menu__hamburger-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            #navigation-bar.responsive .menu__hamburger-icon a {
+                color: #fff;
+            }
+            #navigation-bar.responsive li {
+                float: none;
+                display: block !important;
+            }
+            #navigation-bar.responsive li a{
+                text-align: left;
+            }
+        }
+
+@media screen and (max-width:600px){
+    #links-sidebar{
+        display: none;
+    }
+}
+
+#main-content {
+    flex: 6;
+    padding: 10px 20% 10px 10px;
+}
+
+@media screen and (max-width:600px){
+    #main-content{
+        padding-right: 10px;
+    }
+}
+
+.footer__more-sites ul {
+    padding: 0 0 0 10px;
+}
+
+.footer__more-sites li {
+    list-style: none;
+}
+
+@media screen and (max-width:600px){
+    #footer{
+        flex-direction: column;
+    }
+    .footer__section{
+        border-bottom: 1px solid;
+        padding-bottom: 10px;
+    }
+}
+
+.footer__section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .social__networks {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .social__network {
+            display: flex;
+            align-items: center;
+        }
+
+        .social__icon {
+            font-size: 32px;
+        }
+
+        .social__icon-handler {
+            margin-left: 10px;
+        }
+
+        input[type=email], textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            transition: 0.5s;
+            outline: none;
+        }
+
+        input[type=email]:focus, textarea:focus {
+            border: 3px solid #555;
+        }
+
+        input[type=submit] {
+            background: #666655;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+</style>
+
+
+    <script>
+        function myFunction() {
+            const navigationBar = document.getElementById("navigation-bar");
+            if (navigationBar.className === "navigation-bar") {
+                navigationBar.className += " responsive";
+            } else {
+                navigationBar.className = "navigation-bar";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>MARIE CURIE</h1>
+        <p>7/noviembre/1867-4/julio/1934</p>
+    </header>
+
+<nav id="navigation-bar" class="navigation-bar">
+    <ul>
+        <li><a class="active" href="Mariecurie.html">Inicio</a></li>
+        <li><a href="#">Página 2</a></li>
+        <li><a href="#">Página 3</a></li>
+        <li class="menu__hamburger-icon">
+            <a  href="javascript:void(0);" onclick="myFunction()">
+                <i class="lni lni-menu"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<div id="main-content-container">
+<aside id="links-sidebar">
+    <h2>sitios de interes</h2>
+    <ul>
+        <li><a href="Lise Meitner.html">Lise Meitner</a></li><br>
+        <li><a href="Rachel Carson.html">Rachel Carson</a></li><br>
+        <li><a href="Mae Jemison.html">Mae Jemison</a></li><br>
+        
+    </ul>
+</aside>
+
+    <section id="main-content">
+        <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1A13/production/_121457660_gettyimages-613462004.jpg" alt="Marie curie" class="main-content__img--full-width">
+        <h2>BIBLIOGRAFIA</h2>
+        <h2>¿Quién fué Marie Curie?</h2>
+        <p>
+            Maria Skłodowska nació el 7 de noviembre de 1867 en Varsovia. Era la quinta hija de Władysław Skłodowski, profesor de física y matemáticas de liceo, al igual que su abuelo, y de Bronisława Boguska, quien fue maestra, pianista y cantante. Maria era la menor de cinco hijos: Zofia (1862), Józef (1863), Bronisława (1865), Helena (1866) y finalmente ella, Maria (1867).<br>
+            En aquel tiempo, la mayor parte de Polonia estaba ocupada por Rusia, que, tras varias revueltas nacionalistas sofocadas violentamente, había impuesto su lengua y sus costumbres. Junto con su hermana Helena, Maria asistía a clases clandestinas ofrecidas en un pensionado en las que se enseñaba la cultura polaca. Sus primeros años estuvieron marcados por la penosa muerte de su hermana Zofia como consecuencia del tifus y, dos años más tarde, la de su madre a causa de una tuberculosis. Esos eventos hicieron que Maria dejara la religión católica romana y se volviera agnóstica. Entre sus intereses destacaba la pasión por la lectura, especialmente en la historia natural y la física (Maria muestra su afición por la lectura a la edad de cuatro años, edad a la que ya leía perfectamente).En la secundaria fue siempre la primera alumna de su clase, y se destacó por influir en sus compañeras el entusiasmo por el trabajo. Ruso, polaco, alemán o francés eran algunas de las lenguas que Maria dominaba. Más adelante se interesaría por la física y se graduaría a los 15 años.<br>
+            En 1891 partió hacia París, donde cambió su nombre por Marie. En 1891 se matriculó en el curso de ciencias de la Universidad parisiense de la Sorbona. Pasados dos años, finalizó sus estudios de física con el número uno de su promoción. En 1894 conoció a Pierre Curie. En este momenrto, los dos trabajaban en el campo del magnetismo. Con 35 años, Pierre Curie era una brillante esperanza en la física francesa. Se enamoró enseguida de aquella fina y casi austera polaca de 27 años que compartía su fe altruista en la ciencia. Después de que Pierre Curie le propone matrimonio y la convence para que viva en París,celebran el 26 de julio de 1895, su boda con una sencillez extrema: ni fiesta, ni alianzas, ni vestido blanco.
+         </p>
+    </section>
+</div> 
+
+
+<footer id="footer">
+    <div class="footer__social footer__section">
+        <h2>Mis redes</h2>
+
+        <i class="lni lni-github-original"></i><h3><a href="https://github.com/Dalila-Ku">Dalila Ku</a></h3>
+        <i class="lni lni-linkedin-original"></i><h3><a href="https://www.linkedin.com/in/dalila-ku-788471213/">Dalila Ku</a></h3> 
+
+    </div>
+    <div class="footer__contact-form footer__section">
+        <h2>Contacto</h2>
+        <div>
+            <form>
+                <label for="contactEmail"> Correo electronico:</label>
+                <input id="contactEmail" required type="email" placeholder="Ingresa tu correo electronico">
+
+                <label for="contactMessage"> Mensaje:</label>
+                <textarea id="contactMessage" required rows="4" cols="50"> </textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+    <div class="footer__more-sites footer__section">
+        <h2>Otros de mis sitios</h2>
+        <ul>
+            <li><a href="#">sitio a</a></li>
+            <li><a href="#">sitio a</a></li>
+            <li><a href="#">sitio a</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

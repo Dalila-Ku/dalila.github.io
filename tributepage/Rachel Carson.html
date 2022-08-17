@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>Rachel Carson</title>
+<style>
+
+
+     html, body{
+        display: flex;
+            flex-direction: column;
+            height: 100%;
+     }  
+     
+     body {
+            margin: 0;
+            background: #26c2b5;
+            color: #3a3a3a;
+            font-family:'PT Serif', serif;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color:#000000;
+            background:#cef781;
+        }
+
+    #main-content{
+        flex: 6;
+        padding: 10px 20% 10px 10px;
+    }
+    .main-content__img--full-width{
+        width: 50%;
+    }
+
+    #main-content-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #links-sidebar {
+            flex: 2;
+            background: pink
+        }
+
+        #main-content {
+            flex: 6;
+            padding: 10px 20% 10px 10px;
+        }
+
+        #footer {
+            padding: 0 20px 20px 20px;
+            margin-top: auto;
+            display: flex;
+            background: #f3f3f3;
+        }
+
+        .footer__section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+#links-sidebar {
+    flex:2;
+    padding: 10px;
+}
+
+#links-sidebar ul{
+    padding: 0 0 0 10px;
+}
+
+#links-sidebar li{
+    list-style: none;
+}
+
+ #navigation-bar ul {
+            margin: 0;
+            padding: 0;
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+        }
+
+        #navigation-bar li {
+            display: inline-block;
+        }
+
+        #navigation-bar li a {
+            display: block;
+            color: #665;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #navigation-bar li a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        #navigation-bar li a.active {
+            color: #fff;
+            background-color: #665;
+        }
+
+        #navigation-bar .menu__hamburger-icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            #navigation-bar li:not(:first-child) {
+                display: none;
+            }
+            #navigation-bar li.menu__hamburger-icon {
+                display: block;
+                float: right;
+            }
+            #navigation-bar.responsive {
+                position: relative;
+            }
+            #navigation-bar.responsive .menu__hamburger-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            #navigation-bar.responsive .menu__hamburger-icon a {
+                color: #fff;
+            }
+            #navigation-bar.responsive li {
+                float: none;
+                display: block !important;
+            }
+            #navigation-bar.responsive li a{
+                text-align: left;
+            }
+        }
+
+@media screen and (max-width:600px){
+    #links-sidebar{
+        display: none;
+    }
+}
+
+#main-content {
+    flex: 6;
+    padding: 10px 20% 10px 10px;
+}
+
+@media screen and (max-width:600px){
+    #main-content{
+        padding-right: 10px;
+    }
+}
+
+.footer__more-sites ul {
+    padding: 0 0 0 10px;
+}
+
+.footer__more-sites li {
+    list-style: none;
+}
+
+@media screen and (max-width:600px){
+    #footer{
+        flex-direction: column;
+    }
+    .footer__section{
+        border-bottom: 1px solid;
+        padding-bottom: 10px;
+    }
+}
+
+.footer__section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .social__networks {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .social__network {
+            display: flex;
+            align-items: center;
+        }
+
+        .social__icon {
+            font-size: 32px;
+        }
+
+        .social__icon-handler {
+            margin-left: 10px;
+        }
+
+        input[type=email], textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            transition: 0.5s;
+            outline: none;
+        }
+
+        input[type=email]:focus, textarea:focus {
+            border: 3px solid #555;
+        }
+
+        input[type=submit] {
+            background: #666655;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+</style>
+
+
+    <script>
+        function myFunction() {
+            const navigationBar = document.getElementById("navigation-bar");
+            if (navigationBar.className === "navigation-bar") {
+                navigationBar.className += " responsive";
+            } else {
+                navigationBar.className = "navigation-bar";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Rachel Carson</h1>
+        <p>27 de mayo de 1907- 14 de abril de 1964</p>
+    </header>
+
+<nav id="navigation-bar" class="navigation-bar">
+    <ul>
+        <li><a class="active" href="Mariecurie.html">Inicio</a></li>
+        <li><a href="#">Página 2</a></li>
+        <li><a href="#">Página 3</a></li>
+        <li class="menu__hamburger-icon">
+            <a  href="javascript:void(0);" onclick="myFunction()">
+                <i class="lni lni-menu"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<div id="main-content-container">
+
+
+    <section id="main-content">
+        <img src="https://mujeresconciencia.com/app/uploads/2015/06/El-caso-de-Rachel-Carson.jpg" alt="RACHEL CARSON" class="main-content__img--full-width">
+        <h2>BIBLIOGRAFIA</h2>
+        <h2>¿Quién fue Rachel Carson?</h2>
+        <p>
+            Rachel Carson nació en 1907 en Springdale, Pennsylvania, y, por tanto, murió a los 56 años, 
+            en la plenitud de su talento como escritora y divulgadora. Era bióloga, con una tesis de máster 
+            en la Universidad Johns Hopkins de Baltimore. Por problemas familiares y falta de fondos, no pudo 
+            hacer el doctorado y seguir en la investigación, como ella quería, y enseñó durante unos años antes 
+            de entrar en el Servicio de Pesquerías del gobierno, luego llamado Servicio de Pesca y de la Vida Salvaje.<br>
+            Después de esta breve introducción, vayamos al detalle. En Springdale, su lugar de nacimiento,
+             vivió en la granja de su familia, de unas 26 hectáreas, y que, desde muy niña, Rachel había explorado
+            a fondo. Gran lectora, con preferencia de libros que tratasen del mar y de autores como Herman Melville,
+            Joseph Conrad o Robert Louis Stevenson, publicó su primer cuento a los 11 años. Cuando comenzó sus estudios
+            secundarios se matriculó en Inglés pero pronto, en 1928, pasó a Biología. Aunque por problemas económicos
+            en la familia, ya que su padre, vendedor de seguros, perdió su trabajo y, además, estamos en 1928, al comienzo
+            de la Gran Depresión, tardó en graduarse en la Universidad Johns Hopkins y no pudo continuar sus estudios de
+            zoología y genética. Se dedicó a la enseñanza hasta 1935, cuando murió su padre y se hizo cargo de su madre.
+            Por recomendación de una de sus profesoras entró, con un contrato temporal, en el Servicio de Pesquerías. Su
+            trabajo consistía en escribir guiones educativos para un programa de radio llamado Romance bajo las aguas.
+             Eran 52 programas de 7 minutos cada uno, y los completó con éxito. Le ofrecieron un contrato a tiempo completo
+             y, después, preparó y se presentó al examen para conseguir el puesto. Se celebró en 1936,
+             sacó el número 1 y fue la segunda mujer en conseguirlo en el Servicio de Pesquerías<br>
+             
+
+         </p>
+    </section>
+</div> 
+
+
+<footer id="footer">
+    <div class="footer__social footer__section">
+        <h2>Mis redes</h2>
+
+        <i class="lni lni-github-original"></i><h3><a href="https://github.com/Dalila-Ku">Dalila Ku</a></h3>
+        <i class="lni lni-linkedin-original"></i><h3><a href="https://www.linkedin.com/in/dalila-ku-788471213/">Dalila Ku</a></h3> 
+
+    </div>
+    <div class="footer__contact-form footer__section">
+        <h2>Contacto</h2>
+        <div>
+            <form>
+                <label for="contactEmail"> Correo electronico:</label>
+                <input id="contactEmail" required type="email" placeholder="Ingresa tu correo electronico">
+
+                <label for="contactMessage"> Mensaje:</label>
+                <textarea id="contactMessage" required rows="4" cols="50"> </textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+    <div class="footer__more-sites footer__section">
+        <h2>Otros de mis sitios</h2>
+        <ul>
+            <li><a href="#">sitio a</a></li>
+            <li><a href="#">sitio a</a></li>
+            <li><a href="#">sitio a</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
